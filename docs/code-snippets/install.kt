@@ -1,0 +1,1 @@
+implementation("xyz.mcxross.ksui:ksui:<$ksui_version>")

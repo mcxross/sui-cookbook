@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Welcome"
+       id="welcome">
+    <section-starting-page>
+        <title>Sui Cookbook</title>
+        <description>
+            The Sui Cookbook is a comprehensive guide designed for developers looking to build applications on the
+            Sui blockchain.
+        </description>
+
+        <spotlight>
+            <a href="getting-started.topic" type="start" summary="Learn how to setup your Sui development environment">
+            </a>
+            <a href="Transactions.md" type="network"
+               summary="Learn how to construction Sui Transactions using both the SDK and PTB Studio">
+            </a>
+        </spotlight>
+
+        <misc>
+            <cards>
+                <title>Extended Technologies</title>
+                <a href="deepbook.md"
+                   summary="Easily add Sui's global liquidity to your app">
+                    DeepBook
+                </a>
+                <a href="zklogin.topic"
+                   summary="Use web2 credentials with Sui in your app">
+                    zkLogin
+                </a>
+            </cards>
+        </misc>
+
+    </section-starting-page>
+</topic>

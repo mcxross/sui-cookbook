@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE terms SYSTEM "https://resources.jetbrains.com/writerside/1.0/glossary.dtd">
+<terms>
+    <term name="Mainnet">The network that processes production transaction blocks. When you trade SUI or NFTs that are
+        ultimately based on fiat currency, you are doing so on the Mainnet network of Sui
+    </term>
+    <term name="Testnet">Staging network to provide quality assurance that any planned changes to Sui do not adversely
+        impact performance. Developers can use this network to test their code before placing it in production
+    </term>
+    <term name="Devnet">A more unstable network that is used to develop new features. Developers can leverage this
+        network to code against the latest planned features of Sui
+    </term>
+    <term name="Localnet">You can run a Sui network on your local computer. Developing on a local network provides an
+        optimized workflow in an environment you control
+    </term>
+</terms>

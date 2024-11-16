@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <sitemap priority="0.5" change-frequency="weekly"/>
+    <variables>
+        <primary-color>#7F52FF</primary-color>
+        <color-preset>contrast</color-preset>
+        <header-logo>sui-cookbook.svg</header-logo>
+        <custom-favicons>sui-cookbook.svg</custom-favicons>
+        <noindex-content>false</noindex-content>
+        <enable-contribution>true</enable-contribution>
+        <contribute-url>https://github.com/mcxross/sui-cookbook</contribute-url>
+        <analytics-head-script-file>gtm.js</analytics-head-script-file>
+        <analytics-body-html-file>google_analytics_noscript.html</analytics-body-html-file>
+        <download-title>Launch PTB Studio</download-title>
+        <download-page>https://ptb.studio</download-page>
+        <showDownloadButton>true</showDownloadButton>
+    </variables>
+    <build-profile instance="in">
+        <variables>
+            <noindex-content>false</noindex-content>
+        </variables>
+    </build-profile>
+    <footer>
+        <social type="twitter" href="https://x.com/mcxross">McXross on X</social>
+
+        <link href="mailto:contact@mcxross.xyz">Contact us</link>
+
+        <copyright>2024 McXross</copyright>
+    </footer>
+</buildprofiles>

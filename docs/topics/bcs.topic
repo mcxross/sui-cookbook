@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Binary Canonical Serialization" id="bcs" help-id="Binary Canonical Serialization">
+    <show-structure for="tab,chapter,procedure" depth="2"/>
+
+    <p>
+        Binary Canonical Serialization is an efficient binary format for structured data,
+        ensuring consistent serialization across platforms. This format is used extensively by Sui, so it is worth
+        touching.
+    </p>
+
+    <chapter title="Installation" id="installation">
+        <p>It is available for various platforms, and we can install it by adding a dependency for a platform
+            as follows:
+        </p>
+        <tabs>
+            <tab id="generic-install" title="Generic">
+        <code-block lang="kotlin">
+           implementation("xyz.mcxross.bcs:&lt;bcs-[platform]&gt;:&lt;$bcs_version&gt;")
+        </code-block>
+            </tab>
+            <tab id="multiplatform-install" title="Multiplatform">
+        <code-block lang="kotlin">
+           implementation("xyz.mcxross.bcs:bcs:&lt;$bcs_version&gt;")
+        </code-block>
+            </tab>
+            <tab id="android-install" title="Android">
+        <code-block lang="kotlin">
+           implementation("xyz.mcxross.bcs:bcs-android:&lt;$bcs_version&gt;")
+        </code-block>
+            </tab>
+            <tab id="jvm-install" title="JVM">
+            <code-block lang="Kotlin">
+                implementation("xyz.mcxross.bcs:bcs-jvm:&lt;$bcs_version&gt;")
+            </code-block>
+            </tab>
+        </tabs>
+    </chapter>
+
+
+    <chapter title="Serialization" id="serialization">
+        <p>In order to serializer a user defined type, first make a class serializable by annotating it with <code>@Serializable</code>
+        </p>
+        <code-block lang="kotlin">
+@Serializable
+data class Data(
+    val long: Long,
+    val double: Double,
+    val string: String,
+    val boolean: Boolean
+)
+    </code-block>
+        <p>You can now serialize an instance of this class by calling <code>Bcs.encodeToByteArray()</code></p>
+        <code-block lang="Kotlin">
+val bcs = Bcs.encodeToByteArray(Data(1_000_000, 3.14159265359, "çå∞≠¢õß∂ƒ∫", false))</code-block>
+    </chapter>
+
+    <chapter title="Deserialization" id="deserialization">
+        <p>To deserialize an object from BCS, use the <code>decodeFromByteArray()</code> static methode:</p>
+        <code-block lang="Kotlin">
+            val obj = Bcs.decodeFromByteArray&lt;Data&gt;(bcs)
+        </code-block>
+    </chapter>
+</topic>

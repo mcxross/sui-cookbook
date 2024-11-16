@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="zkLogin" id="zklogin" help-id="zkLogin">
+    <show-structure for="tab,chapter,procedure" depth="2"/>
+    <tabs>
+        <tab id="android-install" title="Android">
+        <code-block lang="kotlin">
+           implementation("xyz.mcxross.bcs:bcs-android:&lt;$bcs_version&gt;")
+        </code-block>
+            <p>After installation, you can then use it as follows:</p>
+            <code-block lang="kotlin" src="zkLogin-android.kt" include-lines="1-15"/>
+            <p>You can the trigger the login process as follows:</p>
+            <code-block lang="kotlin" src="zkLogin-android.kt" include-lines="18-27"/>
+        </tab>
+    </tabs>
+</topic>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <rule id="6b23e458">
+        <description>Created after removal of "Development" from SuiCookbook
+            Help IDs that are no longer available in build after removal:
+
+            Development
+        </description>
+        <accepts>development.html</accepts>
+    </rule>
+</rules>
