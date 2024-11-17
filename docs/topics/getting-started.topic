@@ -40,7 +40,7 @@
     </p>
 
     <p>
-        To add a library client to your project, follow the instructions below:
+        To integrate the client as a library into your project, follow the instructions below:
     </p>
 
     <chapter title="Client Library Installation" id="client-library-installation">
@@ -56,7 +56,8 @@
             </tab>
             <tab id="multiplatform-install" title="Multiplatform">
                 <p>
-                    If you have a Kotlin Multiplaform project, add the following dependency to your projects' common sourceSet:
+                    If you have a Kotlin Multiplaform project, add the following dependency to your projects' common
+                    sourceSet:
                 </p>
                 <br/>
                 <code-block lang="kotlin">
@@ -84,28 +85,37 @@
     </chapter>
 
     <chapter title="Sui Client" id="sui-client">
-        <p>Create a <code>Sui</code> instance. This is the entry point for the client</p>
+        <p>
+            Once you've successfully added the dependencies, create a <code>Sui</code> instance as showed below:
+        </p>
+        <link-summary>val sui = Sui()</link-summary>
         <code-block lang="kotlin">
             val sui = Sui()
         </code-block>
-        The default connection network is <tooltip term="Devnet"><code>devnet</code></tooltip>. To change this:
+        This serves as the main entry point for the client. By default, it connects to the
+        <tooltip term="Devnet"><code>devnet</code></tooltip>
+        network. However, you can customize the network configuration as follows:
         <code-block lang="Kotlin">
             val config = SuiConfig(settings = SuiSettings(network = Network.MAINNET))
             val sui = Sui(config)
         </code-block>
 
-        The Sui Client is heavily configurable. You can set things like <code>connectAttempts</code>,
-        <code>retryOnServerErrors</code>, <code>proxy</code>, and much more.
-
-        Simply pass a <code>ClientConfig</code> object to the settings:
+        You can also set other things like <code>connectAttempts</code>,
+        <code>retryOnServerErrors</code>, <code>proxy</code>, and much more:
 
         <code-block lang="Kotlin">
             val settings = SuiSettings(clientConfig = ClientConfig(maxRetries = 5))
             val sui = Sui(SuiConfig(settings))
         </code-block>
 
+        <note>
+        Certain configurations apply universally across all supported platforms, while others are specific to individual
+        platforms. For detailed information, refer to the  <a href="https://mcxross.github.io/ksui/">reference</a>.
+        </note>
+
         <p>
-            Our client is now ready for use. We can now call the various available methods on this <code>sui</code> object.
+            Our client is now ready for use. We can now call the various available methods on this <a href="getting-started.topic#sui-client"><code>sui</code></a>
+            object.
         </p>
     </chapter>
 

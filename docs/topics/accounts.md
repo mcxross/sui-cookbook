@@ -1,5 +1,8 @@
 # Accounts
 
+In this chapter, we’ll explore account creation, restoration, and performing both read and write operations. 
+Let’s start with creating a Sui account.
+
 ## Creating new Accounts
 
 To create a new Sui Account, simply invoke the static `create` method on the `Account` class.
@@ -12,7 +15,8 @@ To create a new Sui Account, simply invoke the static `create` method on the `Ac
 ## Importing an existing Account
 
 In case you already have existing account credentials like a Bech32 encoded private key or
-passphrase that you'd like to import and use.
+passphrase that you'd like to import and use, there's an overloaded `import` static method
+on the `Accounts` class. Pass in either the private key string or the passphrase.
 
 For a private key:
 
@@ -90,3 +94,6 @@ as follows:
 ```kotlin
 val response = [[[sui|getting-started.topic#sui-client]]].requestTestTokens(account.address)
 ```
+
+Once your account is set up, you can start performing transactions on Sui. Let's
+get into that in the next chapter.
