@@ -17,7 +17,7 @@
         <showDownloadButton>true</showDownloadButton>
         <algolia-id>6KAG4QZ91S</algolia-id>
         <algolia-api-key>cd00a261d7863ad9a627e0d1f64fd66d</algolia-api-key>
-        <algolia-index>prod_suicookbook</algolia-index>
+        <algolia-index>suicookbook</algolia-index>
         <web-root>https://suicookbook.com/</web-root>
         <max-search-hits-to-display>10</max-search-hits-to-display>
         <max-search-results>10</max-search-results>
