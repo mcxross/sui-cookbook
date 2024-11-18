@@ -15,6 +15,9 @@
         <download-title>Launch PTB Studio</download-title>
         <download-page>https://ptb.studio</download-page>
         <showDownloadButton>true</showDownloadButton>
+        <algolia-id>6KAG4QZ91S</algolia-id>
+        <algolia-api-key>cd00a261d7863ad9a627e0d1f64fd66d</algolia-api-key>
+        <algolia-index>suicookbook</algolia-index>
     </variables>
     <build-profile instance="in">
         <variables>
