@@ -9,7 +9,7 @@
         <custom-favicons>sui-cookbook.svg</custom-favicons>
         <noindex-content>false</noindex-content>
         <enable-contribution>true</enable-contribution>
-        <contribute-url>https://github.com/mcxross/sui-cookbook</contribute-url>
+        <contribute-url>https://github.com/mcxross/sui-cookbook/docs</contribute-url>
         <analytics-head-script-file>gtm.js</analytics-head-script-file>
         <analytics-body-html-file>google_analytics_noscript.html</analytics-body-html-file>
         <download-title>Launch PTB Studio</download-title>
@@ -18,6 +18,9 @@
         <algolia-id>6KAG4QZ91S</algolia-id>
         <algolia-api-key>cd00a261d7863ad9a627e0d1f64fd66d</algolia-api-key>
         <algolia-index>suicookbook</algolia-index>
+        <web-root>https://suicookbook.com/</web-root>
+        <max-search-hits-to-display>10</max-search-hits-to-display>
+        <max-search-results>10</max-search-results>
     </variables>
     <build-profile instance="in">
         <variables>
