@@ -5,15 +5,33 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="zkLogin" id="zklogin" help-id="zkLogin">
     <show-structure for="tab,chapter,procedure" depth="2"/>
+    <p>zkLogin is a Sui primitive the enables us to use Web2 credentials on Sui.</p>
+    <p>This technology allows use to sign Sui Transactions using Web2 credentials from providers like Google, Facebook,
+        and Slack
+    </p>
+    Follow the steps below to integrate zkLogin into your app:
+
+
     <tabs>
         <tab id="android-install" title="Android">
+            Let's begin by adding dependency to the <b>ZeroAuth</b> Android zkLogin SDK. To do that,
+            add the following to your projects' app module dependency block:
         <code-block lang="kotlin">
-           implementation("xyz.mcxross.bcs:bcs-android:&lt;$bcs_version&gt;")
+           implementation("xyz.mcxross.zero:auth-android:&lt;$zklogin_version&gt;")
         </code-block>
             <p>After installation, you can then use it as follows:</p>
             <code-block lang="kotlin" src="zkLogin-android.kt" include-lines="1-15"/>
-            <p>You can the trigger the login process as follows:</p>
+            <p>The code above is how we'll retrieve our Sign In results.</p>
+            <p>In order to receive the results, we must trigger the login process as follows:</p>
             <code-block lang="kotlin" src="zkLogin-android.kt" include-lines="18-27"/>
         </tab>
+        <tab id="ios-install" title="iOS">
+            To be added
+        </tab>
     </tabs>
+
+    The code above shows how to do zkLogin using Google as the Provider, however, the follow
+    is generally the same for all other supported providers.
+
+    For detailed information on <b>ZeroAuth</b>, go <a href="https://zeroauth.com">here</a>
 </topic>

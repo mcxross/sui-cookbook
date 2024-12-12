@@ -13,10 +13,10 @@
         </description>
 
         <spotlight>
-            <a href="getting-started.topic" type="start" summary="Learn how to setup your Sui development environment">
+            <a href="getting-started.topic" type="start" summary="Learn how to setup your Sui development environment.">
             </a>
             <a href="Transactions.md" type="network"
-               summary="Learn how to construction Sui Transactions using both the SDK and PTB Studio">
+               summary="Learn how to construct Sui Transactions using both SDKs and PTB Studio.">
             </a>
         </spotlight>
 
@@ -24,11 +24,11 @@
             <cards>
                 <title>Extended Technologies</title>
                 <a href="deepbook.md"
-                   summary="Easily add Sui's global liquidity to your app">
+                   summary="Learn how to integrate Sui's global liquidity into your app.">
                     DeepBook
                 </a>
                 <a href="zklogin.topic"
-                   summary="Use web2 credentials with Sui in your app">
+                   summary="Discover how to integrate Web2 authentication methods into your Sui projects.">
                     zkLogin
                 </a>
             </cards>
