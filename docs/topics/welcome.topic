@@ -32,6 +32,13 @@
                     zkLogin
                 </a>
             </cards>
+
+            <cards>
+                <title>TL;DR</title>
+                <a href="TL-DR.md" summary="Dive straight into sample code and projects">
+                    Sample Projects
+                </a>
+            </cards>
         </misc>
 
     </section-starting-page>

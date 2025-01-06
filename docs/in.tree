@@ -20,6 +20,9 @@
     <toc-element topic="misc.md">
         <toc-element topic="bcs.topic"/>
     </toc-element>
+    <toc-element topic="TL-DR.md">
+        <toc-element topic="Sui-Wallet.md"/>
+    </toc-element>
     <toc-element topic="Reference.md">
         <toc-element toc-title="Kotlin Sui SDK API"
                      href="https://mcxross.github.io/ksui"/>
