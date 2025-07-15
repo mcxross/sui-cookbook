@@ -1,12 +1,9 @@
 # Transactions
 
-Transactions allow us to alter the state of a Blockchain. In Sui,
-these transactions are made up of a chain of commands termed
-Programmable Transaction Blocks.
+Transactions are how we change the state of the blockchain. On Sui, a transaction consists of a sequence of commands 
+known as Programmable Transaction Blocks (PTBs).
 
-The execution of these commands is an all-or-nothing operation, in that, either all
-commands execute successfully or the entire transaction fails. Construction of
-these PTBs is either by SDKs or Transaction Builders.
+These commands are executed atomically — meaning either all commands succeed, or the entire transaction fails. PTBs can 
+be constructed using either an SDK or a Transaction Builder.
 
-In this chapter, we'll cover how to construct PTBs with both an SDK and a Transaction
-Builder.
+In this chapter, we’ll walk through how to build PTBs using both approaches.
