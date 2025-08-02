@@ -61,10 +61,7 @@ on user input.
 ```Kotlin
 val builder = ProgrammableTransactionBuilder()
 
-builder.moveCall {
-    target = FUNCTION_ID
-    arguments = listOf(builder.pure(0UL))
-}
+builder.moveCall(FUNCTION_ID, args = listOf(builder.pure(0UL)))
 ```
 
 To finalize the assembling of the PTB with the builder style, call the `build` method as shown below:
@@ -139,7 +136,7 @@ val ptb = ptb {
 
 ## Operator Overloads
 
-The SDK provides helper overloads for passing inputs to
+The SDK provides helper overloads when working with the DSL style for passing inputs to
 commands. These are the `unaryPlus` operator and `plus` operator.
 
 #### unaryPlus operator
