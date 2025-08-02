@@ -93,10 +93,10 @@
             val sui = Sui()
         </code-block>
         This serves as the main entry point for the client. By default, it connects to the
-        <tooltip term="Devnet"><code>devnet</code></tooltip>
+        <tooltip term="Mainnet"><code>mainnet</code></tooltip>
         network. However, you can customize the network configuration as follows:
         <code-block lang="Kotlin">
-            val config = SuiConfig(settings = SuiSettings(network = Network.MAINNET))
+            val config = SuiConfig(SuiSettings(network = Network.TESTNET))
             val sui = Sui(config)
         </code-block>
 
@@ -113,6 +113,25 @@
         platforms. For detailed information, refer to the  <a href="https://mcxross.github.io/ksui/">reference</a>.
         </note>
 
+        The client created is by default what the SDK uses for object resolution during PTB construction.
+        This means you don't need to pass the client explicitly when constructing a PTB.
+        However, if you want to use a different client, you can pass it as an argument
+        to the <code>PTB</code> constructor like this:
+        <code-block lang="kotlin">
+                val ptb = ptb(sui = sui) {... }
+        </code-block>
+
+        For Builder Style, you can do it like this:
+        <code-block lang="kotlin">
+        val builder = ProgrammableTransactionBuilder()
+
+        builder.moveCall(FUNCTION_ID, args = listOf(builder.pure(0UL)))
+
+        builder.build(sui = sui)
+        </code-block>
+
+        Details about building transaction can be found in the
+        <a href="Transactions.md"/> topic.
         <p>
             Our client is now ready for use. We can now call the various available methods on this <a href="getting-started.topic#sui-client"><code>sui</code></a>
             object.
