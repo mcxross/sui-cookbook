@@ -1,99 +1,16 @@
 # Accounts
 
-In this chapter, we’ll explore account creation, restoration, and performing both read and write operations. 
-Let’s start with creating a Sui account.
+In order to perform actions on Sui, you need an account. An account is represented by a key pair (public and private keys) 
+that allows you to sign transactions and manage your assets on the Sui network.
 
-## Creating new Accounts
+Sui is cryptographically agile, supporting transaction signing with Google accounts (via zkLogin), passkeys, and 
+standard key schemes such as Ed25519, ECDSA, and more.
 
-To create a new Sui Account, simply invoke the static `create` method on the `Account` class.
+The Kotlin SDK currently supports the following types of accounts:
 
-```kotlin
-```
+- **Ed25519Account**: This account type uses the Ed25519 signature scheme.
+- **Secp256k1Account**: This account type uses the Secp256k1 signature scheme.
+- **Secp256r1Account**: This account type uses the Secp256r1 signature scheme.
+- **PasskeyAccount**: This account type uses passkeys for authentication.
 
-{ src="account.kt" include-lines="1" }
-
-## Importing an existing Account
-
-In case you already have existing account credentials like a Bech32 encoded private key or
-passphrase that you'd like to import and use, there's an overloaded `import` static method
-on the `Accounts` class. Pass in either the private key string or the passphrase.
-
-For a private key:
-
-```kotlin
-```
-
-{ src="account.kt" include-lines="3" }
-
-For a passphrase:
-
-```kotlin
-```
-
-{ src="account.kt" include-lines="4" }
-
-## Get Account Balance
-
-Once you've an `account`, you can either retrieve the balance for a specific coin type or for
-all coin types.
-
-For a specific coin type:
-
-```kotlin
-val suiBalance = [[[sui|getting-started.topic#sui-client]]].getBalance(account.address)
-```
-
-This defaults to the `0x2::sui::SUI` coin type, or you can pass a particular coin type argument to the `type` parameter
-as shown below:
-
-```kotlin
-val particularTypeBalance = [[[sui|getting-started.topic#sui-client]]].getBalance(account.address, PARTICULAR_TYPE)
-```
-
-You can also simply retrieve all coin type balances as follows:
-
-```kotlin
-val allBalances = [[[sui|getting-started.topic#sui-client]]].getAllBalances(account.address)
-```
-
-## Get Account Objects
-
-You can also retrieve objects owned by a given account address:
-
-```kotlin
-val ownedObjects = [[[sui|getting-started.topic#sui-client]]].getOwnedObjects(account.address)
-```
-
-## Get Account Coins
-
-Account Coins retrieval also follows the same pattern
-
-```kotlin
-val coins = [[[sui|getting-started.topic#sui-client]]].getCoins(account.address)
-```
-
-## Get Account Stakes
-
-You can fetch stakes for an account as follows:
-
-```kotlin
-val stakes = [[[sui|getting-started.topic#sui-client]]].getStakes(account.address)
-```
-
-## Resolve Account Name Service Names
-
-```Kotlin
-val names = [[[sui|getting-started.topic#sui-client]]].resolveNameServiceNames(account.address)
-```
-
-## Request Test Tokens
-
-If your `Sui()` client is configured for testnet, you can request test tokens from a faucet
-as follows:
-
-```kotlin
-val response = [[[sui|getting-started.topic#sui-client]]].requestTestTokens(account.address)
-```
-
-Once your account is set up, you can start performing transactions on Sui. Let's
-get into that in the next chapter.
+All account types have a common predicatable interface, allowing you to interact with them consistently.

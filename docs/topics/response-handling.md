@@ -1,6 +1,7 @@
 # Response Handling
 
-Every data-fetching operation in the SDK returns a `Result`, which models either a success `(Ok)` or a failure `(Err)`. This design ensures you handle both outcomes explicitly, making your code more predictable and safer by default.
+Every data-fetching operation in the SDK returns a `Result`, which models either a success `(Ok)` or a failure `(Err)`. 
+This design ensures you handle both outcomes explicitly, making your code more predictable and safer by default.
 
 You can work with the result in several ways:
 

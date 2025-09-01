@@ -22,18 +22,6 @@
 
         <misc>
             <cards>
-                <title>Extended Technologies</title>
-                <a href="deepbook.md"
-                   summary="Learn how to integrate Sui's global liquidity into your app.">
-                    DeepBook
-                </a>
-                <a href="zklogin.topic"
-                   summary="Discover how to integrate Web2 authentication methods into your Sui projects.">
-                    zkLogin
-                </a>
-            </cards>
-
-            <cards>
                 <title>TL;DR</title>
                 <a href="TL-DR.md" summary="Dive straight into sample code and projects">
                     Sample Projects

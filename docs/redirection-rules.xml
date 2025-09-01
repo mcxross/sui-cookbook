@@ -13,4 +13,20 @@
         <description>Created after removal of "Coin" from Sui Cookbook</description>
         <accepts>Coin.html</accepts>
     </rule>
+    <rule id="2f52daf7">
+        <description>Created after removal of "DeepBook" from Sui Cookbook</description>
+        <accepts>deepbook.html</accepts>
+    </rule>
+    <rule id="7d7fce75">
+        <description>Created after removal of "zkLogin" from Sui Cookbook
+            Help IDs that are no longer available in build after removal:
+
+            zkLogin
+        </description>
+        <accepts>zklogin.html</accepts>
+    </rule>
+    <rule id="1374e93a">
+        <description>Created after removal of "Extended Technology" from Sui Cookbook</description>
+        <accepts>ext-technology.html</accepts>
+    </rule>
 </rules>

@@ -8,7 +8,10 @@
 
     <toc-element topic="welcome.topic"/>
     <toc-element topic="getting-started.topic"/>
-    <toc-element topic="accounts.md"/>
+    <toc-element topic="accounts.md">
+        <toc-element topic="priv-keys.md"/>
+        <toc-element topic="passkeys.md"/>
+    </toc-element>
     <toc-element topic="Transactions.md">
         <toc-element topic="programmable-transaction-blocks.md"/>
         <toc-element topic="ptb-studio.md"/>
@@ -16,12 +19,8 @@
     <toc-element topic="data-retrieval.md">
         <toc-element topic="GraphQL.md"/>
         <toc-element topic="gRPC.md"/>
-        <toc-element topic="response-handling.md"/>
     </toc-element>
-    <toc-element topic="ext-technology.md">
-        <toc-element topic="deepbook.md"/>
-        <toc-element topic="zklogin.topic"/>
-    </toc-element>
+    <toc-element topic="response-handling.md"/>
     <toc-element topic="misc.md">
         <toc-element topic="bcs.topic"/>
     </toc-element>
